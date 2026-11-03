@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Book Explorer - Plain CSS version</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav" aria-label="Main">
+      <a class="logo" href="#">Book Explorer</a>
+      <ul class="nav-links">
+        <li class="nav-hide"><a class="nav-link" href="#features">Features</a></li>
+        <li class="nav-hide"><a class="nav-link" href="#how">How it works</a></li>
+        <li><a class="btn btn-small" href="#cta">Get started</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-inner">
+        <p class="eyebrow">Free reading-list app</p>
+        <h1>Find your next book in a few keystrokes.</h1>
+        <p class="lead">Search millions of titles from Open Library and save the ones you want to read. No sign-up, no clutter.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#cta">Start exploring</a>
+          <a class="btn btn-ghost" href="#how">See how it works</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="section">
+      <div class="container">
+        <h2 class="section-title">Everything you need to find a good read</h2>
+        <p class="section-sub">Simple tools, no distractions.</p>
+        <div class="cards">
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">🔎</div>
+            <h3 class="card-title">Instant search</h3>
+            <p class="card-text">Type a title and see matching books, authors and covers in seconds.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">❤️</div>
+            <h3 class="card-title">Save favorites</h3>
+            <p class="card-text">Keep a reading list that stays in your browser, even after a refresh.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">📱</div>
+            <h3 class="card-title">Works everywhere</h3>
+            <p class="card-text">A mobile-first layout that looks great on phones, tablets and desktops.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="how" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">How it works</h2>
+        <p class="section-sub">Three steps from curious to reading.</p>
+        <div class="steps">
+          <div class="step">
+            <div class="step-number">1</div>
+            <h3 class="card-title">Search</h3>
+            <p class="card-text">Enter a title or browse the popular picks.</p>
+          </div>
+          <div class="step">
+            <div class="step-number">2</div>
+            <h3 class="card-title">Save</h3>
+            <p class="card-text">Tap Add to favorites on any book you like.</p>
+          </div>
+          <div class="step">
+            <div class="step-number">3</div>
+            <h3 class="card-title">Read</h3>
+            <p class="card-text">Come back to your list whenever you are ready.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cta" class="cta">
+      <div class="cta-inner">
+        <h2 class="cta-title">Ready to build your reading list?</h2>
+        <p class="cta-text">Join the waiting list and be first to hear about new features.</p>
+        <form class="cta-form" onsubmit="return false">
+          <label for="email" class="sr-only">Email address</label>
+          <input id="email" type="email" class="cta-input" placeholder="you@example.com" required>
+          <button type="submit" class="cta-button">Notify me</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <p>Book Explorer · Landing page practice</p>
+      <p>Built with plain CSS</p>
+    </div>
+  </footer>
+
+</body>
+</html>

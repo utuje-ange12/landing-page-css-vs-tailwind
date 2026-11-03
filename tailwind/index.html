@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth scroll-pt-16">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Book Explorer - Tailwind version</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind via the Play CDN: no build step, no CSS file -->
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script>
+    // Same design tokens as the :root variables in plain-css/style.css
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['Lora', 'Georgia', 'serif'],
+          },
+          colors: {
+            paper: '#EAF2F4', page: '#FAFEFF', ink: '#11232B',
+            navy: '#1B2A41', brass: '#E0A458',
+            coral: { DEFAULT: '#C2410C', dark: '#9A3412' },
+          },
+        },
+      },
+    };
+  </script>
+</head>
+<body class="bg-paper text-ink font-sans antialiased">
+
+  <header class="sticky top-0 z-10 bg-page border-b border-brass/40">
+    <nav class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between" aria-label="Main">
+      <a class="font-serif text-xl font-bold text-navy" href="#">Book Explorer</a>
+      <ul class="flex items-center gap-1 sm:gap-4 text-sm font-medium">
+        <li class="hidden sm:block"><a class="block px-3 py-2 rounded-md hover:bg-paper" href="#features">Features</a></li>
+        <li class="hidden sm:block"><a class="block px-3 py-2 rounded-md hover:bg-paper" href="#how">How it works</a></li>
+        <li><a class="inline-block text-center rounded-lg bg-coral hover:bg-coral-dark text-white px-4 py-2 text-sm font-semibold transition-colors focus:outline-none focus:ring-4 focus:ring-brass/60" href="#cta">Get started</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="bg-navy text-paper border-b-4 border-brass">
+      <div class="max-w-6xl mx-auto px-4 py-12 md:py-20">
+        <p class="text-sm font-semibold uppercase tracking-widest text-brass">Free reading-list app</p>
+        <h1 class="mt-3 max-w-2xl font-serif text-3xl md:text-5xl font-bold">Find your next book in a few keystrokes.</h1>
+        <p class="mt-4 max-w-2xl text-lg text-paper/80">Search millions of titles from Open Library and save the ones you want to read. No sign-up, no clutter.</p>
+        <div class="mt-8 flex flex-col sm:flex-row gap-3">
+          <a class="inline-block text-center rounded-lg bg-coral hover:bg-coral-dark text-white px-6 py-3 font-semibold transition-colors focus:outline-none focus:ring-4 focus:ring-brass/60" href="#cta">Start exploring</a>
+          <a class="inline-block text-center rounded-lg border-2 border-brass text-paper hover:bg-brass/20 px-6 py-3 font-semibold transition-colors focus:outline-none focus:ring-4 focus:ring-brass/60" href="#how">See how it works</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="py-14 md:py-20">
+      <div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-center font-serif text-2xl md:text-3xl font-bold text-navy">Everything you need to find a good read</h2>
+        <p class="mt-3 mx-auto max-w-xl text-center italic text-ink/70">Simple tools, no distractions.</p>
+        <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <article class="bg-page rounded-lg border border-brass/30 shadow-md p-6">
+            <div class="text-3xl" aria-hidden="true">🔎</div>
+            <h3 class="mt-4 font-serif text-xl font-semibold text-navy">Instant search</h3>
+            <p class="mt-2 text-ink/80">Type a title and see matching books, authors and covers in seconds.</p>
+          </article>
+          <article class="bg-page rounded-lg border border-brass/30 shadow-md p-6">
+            <div class="text-3xl" aria-hidden="true">❤️</div>
+            <h3 class="mt-4 font-serif text-xl font-semibold text-navy">Save favorites</h3>
+            <p class="mt-2 text-ink/80">Keep a reading list that stays in your browser, even after a refresh.</p>
+          </article>
+          <article class="bg-page rounded-lg border border-brass/30 shadow-md p-6">
+            <div class="text-3xl" aria-hidden="true">📱</div>
+            <h3 class="mt-4 font-serif text-xl font-semibold text-navy">Works everywhere</h3>
+            <p class="mt-2 text-ink/80">A mobile-first layout that looks great on phones, tablets and desktops.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="how" class="py-14 md:py-20 bg-page border-y border-brass/30">
+      <div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-center font-serif text-2xl md:text-3xl font-bold text-navy">How it works</h2>
+        <p class="mt-3 mx-auto max-w-xl text-center italic text-ink/70">Three steps from curious to reading.</p>
+        <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="text-center">
+            <div class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-navy text-brass font-serif text-xl font-bold">1</div>
+            <h3 class="mt-4 font-serif text-xl font-semibold text-navy">Search</h3>
+            <p class="mt-2 text-ink/80">Enter a title or browse the popular picks.</p>
+          </div>
+          <div class="text-center">
+            <div class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-navy text-brass font-serif text-xl font-bold">2</div>
+            <h3 class="mt-4 font-serif text-xl font-semibold text-navy">Save</h3>
+            <p class="mt-2 text-ink/80">Tap Add to favorites on any book you like.</p>
+          </div>
+          <div class="text-center">
+            <div class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-navy text-brass font-serif text-xl font-bold">3</div>
+            <h3 class="mt-4 font-serif text-xl font-semibold text-navy">Read</h3>
+            <p class="mt-2 text-ink/80">Come back to your list whenever you are ready.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cta" class="bg-coral text-white py-14 md:py-20">
+      <div class="max-w-3xl mx-auto px-4 text-center">
+        <h2 class="font-serif text-2xl md:text-3xl font-bold">Ready to build your reading list?</h2>
+        <p class="mt-3 text-white/90">Join the waiting list and be first to hear about new features.</p>
+        <form class="mt-8 mx-auto max-w-xl flex flex-col sm:flex-row gap-3" onsubmit="return false">
+          <label for="email" class="sr-only">Email address</label>
+          <input id="email" type="email" required placeholder="you@example.com"
+                 class="flex-1 rounded-lg px-4 py-3 bg-page text-ink placeholder:text-ink/50 focus:outline-none focus:ring-4 focus:ring-brass/60">
+          <button type="submit"
+                  class="rounded-lg bg-navy hover:bg-ink text-white px-6 py-3 font-semibold transition-colors focus:outline-none focus:ring-4 focus:ring-brass/60">Notify me</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-navy text-paper/80 border-t-4 border-brass">
+    <div class="max-w-6xl mx-auto px-4 py-6 text-sm flex flex-col sm:flex-row gap-2 justify-between">
+      <p>Book Explorer · Landing page practice</p>
+      <p>Built with Tailwind CSS</p>
+    </div>
+  </footer>
+
+</body>
+</html>
