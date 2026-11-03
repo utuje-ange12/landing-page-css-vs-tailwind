@@ -39,21 +39,9 @@ When I rebuilt my landing page with Tailwind, the biggest change was that I stop
 
 My CSS file went from 116 lines to nothing. The colors and fonts live in one place, the Tailwind config, and the spacing and text sizes come from a ready-made scale, so I stopped guessing values like 1.25rem. Making the page responsive was also quicker. Instead of writing a separate @media block, I added prefixes like md:grid-cols-3 right next to the element.
 
-## Push to GitHub
 
-1. On github.com click **New repository**, name it `landing-page-css-vs-tailwind`, leave it empty (no README), and click **Create repository**.
-2. In a terminal inside this folder:
 
-```
-git init
-git add .
-git commit -m "Add plain CSS and Tailwind versions of the landing page"
-git branch -M main
-git remote add origin https://github.com/YOUR-USERNAME/landing-page-css-vs-tailwind.git
-git push -u origin main
-```
 
-3. Copy the repository link and paste it with your workflow note into the submission box.
 
 ## Open in IntelliJ IDEA
 1. **File > Open** and select this folder (`landing-page-css-vs-tailwind`).
