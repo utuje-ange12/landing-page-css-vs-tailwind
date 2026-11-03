@@ -35,7 +35,9 @@ npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
 
 ## Workflow note
 
-Moving from plain CSS to Tailwind changed how I work in three ways. First, I stopped switching between two files: I style directly in the HTML, so I see the result of each change straight away and no longer invent class names like `.card-title` or `.section-alt`. Second, the CSS I wrote shrank from 116 lines to none, because the design tokens (colors, fonts, spacing) live in one `tailwind.config` and the classes come from a fixed scale. Third, responsive design became easier: a prefix such as `md:grid-cols-3` replaces a separate `@media` block. The trade-offs are that the HTML is longer and harder to read at first, repeated groups of classes (like the three cards) are copied instead of reused, and I had to learn the class names. Overall, Tailwind was faster for building and adjusting layouts.
+When I rebuilt my landing page with Tailwind, the biggest change was that I stopped jumping between two files. With plain CSS I wrote the HTML, then went to style.css, then came back to check the result, and I spent a lot of time thinking up class names like .card-title or .section-alt. With Tailwind I just styled everything right in the HTML and saw the result straight away.
+
+My CSS file went from 116 lines to nothing. The colors and fonts live in one place, the Tailwind config, and the spacing and text sizes come from a ready-made scale, so I stopped guessing values like 1.25rem. Making the page responsive was also quicker. Instead of writing a separate @media block, I added prefixes like md:grid-cols-3 right next to the element.
 
 ## Push to GitHub
 
