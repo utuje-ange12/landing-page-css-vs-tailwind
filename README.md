@@ -19,7 +19,7 @@ Open either `index.html` in a browser (double-click it). The footer of each page
 | 4 | Responsive design (mobile first, `sm:` and `md:` breakpoints) | Done |
 | 5 | Tailwind installation | Done via the Play CDN (see below) |
 | 6 | GitHub repository containing both versions | To do: push this folder (commands below) |
-| 7 | Short note on what changed in the workflow | Draft below: edit it in your own words |
+
 
 ## Page sections
 Sticky navbar, hero with two buttons, three feature cards, three "how it works" steps, call-to-action email form, footer.
